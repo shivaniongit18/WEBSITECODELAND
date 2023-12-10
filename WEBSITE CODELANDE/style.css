@@ -426,14 +426,11 @@ footer {
         width: 100%;
         border-top: 0.8px solid rgb(72, 72, 72);
         display: flex;
-        margin: 0px;
         direction: ltr;
         box-sizing: border-box;
     }
 
     .style-9 {
-        margin-top: 0px;
-        margin-bottom: 70px;
         --widgets-spacing: 20px;
         box-sizing: border-box;
         --swiper-theme-color: #000;
@@ -988,10 +985,8 @@ footer {
 
     .style-48 {
         list-style-type: none;
-        margin: 0px;
+        width:100%;
         padding: 0px;
-        margin-top: 0px;
-        margin-bottom: 0px;
         padding-left: 0px;
         box-sizing: border-box;
     }
@@ -1159,7 +1154,7 @@ footer {
     }
 
     .style-63 {
-        width: 25%;
+        width: 100%;
         --widgets-spacing: 20px;
         box-sizing: border-box;
         --swiper-theme-color: #000;
