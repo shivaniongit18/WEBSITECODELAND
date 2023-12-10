@@ -6,10 +6,20 @@ body {
     color: #333;
 }
 
-.container {
-    background-color: #fff;
+/* Responsive viewport settings */
+meta {
+    /* name: viewport; */
+    content: width=device-width, initial-scale=1.0;
 }
 
+/* Container styles */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Header styles */
 header {
     text-align: center;
     font-weight: 600;
@@ -17,6 +27,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Navigation styles */
 nav {
     display: flex;
     justify-content: space-evenly;
@@ -77,14 +88,17 @@ nav {
     color: #FF9A37;
 }
 
+/* Padding for sections */
 .sec_pad {
     padding: 20px;
 }
 
+/* Page wrapper margin */
 .page_wrapper {
     margin-top: 0px;
 }
 
+/* Section styles */
 section {
     display: flex;
     justify-content: center;
@@ -109,6 +123,7 @@ section div h3 {
     line-height: 1.5;
 }
 
+/* Bold heading styles */
 .bold-heading,
 .bold-heading-1 {
     font-family: "Poppins", sans-serif;
@@ -123,16 +138,8 @@ section div h3 {
     border-radius: 50px;
     display: inline;
 }
-@media only screen and (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
 
-    .menu-container {
-        display: none; 
-    }
-
-}
+/* Animation for fadeInUp effect */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -144,18 +151,50 @@ section div h3 {
     }
 }
 
+/* Apply fadeInUp animation to selected elements */
 .bold-heading,
-p {
-    opacity: 0;
-    animation: fadeInUp 1s ease-out forwards;
-}
-
+p,
 .image-content img {
     opacity: 0;
     animation: fadeInUp 1s ease-out forwards;
-    animation-delay: 0.5s;
 }
 
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-container {
+        margin-top: 10px;
+        display: none; /* Hide menu by default on small screens */
+    }
+
+    .menu-container ul {
+        flex-direction: column;
+    }
+
+    .menu-container li {
+        margin: 10px 0;
+        display: block;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Responsive styles for very small screens */
+@media only screen and (max-width: 480px) {
+    /* Additional adjustments for very small screens */
+}
+
+/* Styles for text content and images within a flex container */
 .flex-container {
     display: flex;
     justify-content: space-between;
@@ -165,7 +204,6 @@ p {
 .text-content {
     flex: 1;
     padding: 0 20px;
-    
 }
 
 .heading-1 {
@@ -173,27 +211,24 @@ p {
     font-weight: bold;
     color: #FF9A37;
     text-align: start;
-
 }
+
 .heading-2 {
     text-align: center;
 }
+
 .image-content img {
     max-width: 100%;
     height: auto;
 }
 
-h1, h2, h3 {
+/* Reset margin and padding for heading tags and unordered lists */
+h1, h2, h3, ul {
     margin: 0;
     padding: 0;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
+/* Styles for Elementor widgets and columns */
 .elementor-widget-container {
     display: flex;
     flex-direction: row;
@@ -203,6 +238,8 @@ ul {
     display: flex;
     justify-content: space-around;
 }
+
+/* Custom container styles */
 .custom-container {
     column-gap: 0px;
     row-gap: 0px;
@@ -216,6 +253,7 @@ ul {
     margin-bottom: 0px;
 }
 
+/* Custom link styles */
 .custom-link {
     box-sizing: border-box;
     display: inline-block;
@@ -224,6 +262,7 @@ ul {
     min-width: 0px;
 }
 
+/* Custom icon styles */
 .custom-icon {
     background-color: rgba(204, 127, 127, 0);
     border-radius: 10%;
@@ -274,21 +313,17 @@ ul {
     position: relative;
 }
 
-
-[class^="style-"] {
-    background-color: #021327;
-}
 footer {
     box-sizing: border-box;
     width: 100%;
-    text-align: center;
     background-color: #021327; 
+}
 
 .style-0 {
     transition: background 0.3s ease 0s, border 0.3s ease 0s, border-radius 0.3s ease 0s, box-shadow 0.3s ease 0s;
     padding: 120px 0px 20px;
     background-color: #021327;
-    margin: 0; 
+    width: 100%;
     box-sizing: border-box;
     --widgets-spacing: 20px;
     --swiper-theme-color: #000;
@@ -311,7 +346,6 @@ footer {
     flex-grow: 0;
     flex-shrink: 0;
     order: 0;
-    /* align-self: auto; */
 }
     .style-1 {
         box-sizing: border-box;
@@ -319,12 +353,9 @@ footer {
     }
 
     .style-2 {
-        max-width: 1140px;
+        width: 100%;
         box-sizing: border-box;
         display: flex;
-        margin-right: auto;
-        margin-left: auto;
-        position: relative;
     }
 
     .style-3 {
@@ -426,6 +457,7 @@ footer {
         width: 100%;
         border-top: 0.8px solid rgb(72, 72, 72);
         display: flex;
+        width: 100%;
         direction: ltr;
         box-sizing: border-box;
     }
@@ -985,8 +1017,11 @@ footer {
 
     .style-48 {
         list-style-type: none;
-        width:100%;
+        margin: 0px;
         padding: 0px;
+        width: 100%;
+        /* margin-top: 0px;
+        margin-bottom: 0px; */
         padding-left: 0px;
         box-sizing: border-box;
     }
@@ -1420,7 +1455,7 @@ footer {
         box-sizing: border-box;
         padding: 10px;
         display: flex;
-        position: relative;
+        position: relative; 
         width: 100%;
         flex-wrap: wrap;
         align-content: flex-start;
@@ -2430,5 +2465,3 @@ footer {
         transition: color 0.3s ease 0s;
         box-sizing: border-box;
     }
-
-                         
