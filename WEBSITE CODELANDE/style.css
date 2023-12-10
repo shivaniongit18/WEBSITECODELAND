@@ -156,37 +156,6 @@ p {
     animation-delay: 0.5s;
 }
 
-/* @media (max-width: 768px) {
-    .container {
-        padding: 0 20px;
-    }
-
-    header {
-        padding: 10px 0;
-    }
-
-    .logo-container img {
-        width: 80px;
-    }
-
-    .menu-container ul li {
-        margin-right: 10px;
-    }
-
-    section {
-        flex-direction: column;
-    }
-
-    section div h1 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-    }
-
-    section div h3 {
-        font-size: 1rem;
-    }
-} */
-
 .flex-container {
     display: flex;
     justify-content: space-between;
@@ -309,6 +278,11 @@ ul {
 [class^="style-"] {
     background-color: #021327;
 }
+footer {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    background-color: #021327; 
 
 .style-0 {
     transition: background 0.3s ease 0s, border 0.3s ease 0s, border-radius 0.3s ease 0s, box-shadow 0.3s ease 0s;
