@@ -312,6 +312,9 @@ h1, h2, h3, ul {
     height: 25px;
     position: relative;
 }
+ [class^="style-"] {
+    background-color: #021327;
+}
 
 footer {
     box-sizing: border-box;
